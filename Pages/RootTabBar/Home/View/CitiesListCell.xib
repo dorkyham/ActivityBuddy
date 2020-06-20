@@ -17,6 +17,7 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xP-LW-yIU">
                         <rect key="frame" x="20" y="12" width="188" height="21"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="188" id="8iI-DM-fp1"/>
                         </constraints>
@@ -25,6 +26,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="4xP-LW-yIU" firstAttribute="top" secondItem="SWi-56-ak0" secondAttribute="topMargin" constant="-43" id="UxX-My-qeu"/>
                     <constraint firstItem="4xP-LW-yIU" firstAttribute="leading" secondItem="SWi-56-ak0" secondAttribute="leadingMargin" id="XOJ-85-O8e"/>
