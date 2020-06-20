@@ -16,15 +16,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eNY-tG-k6o">
-                                <rect key="frame" x="0.0" y="88" width="414" height="759"/>
+                                <rect key="frame" x="0.0" y="152" width="414" height="695"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qzl-FL-eoS">
+                                <rect key="frame" x="105" y="110" width="204" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="eNY-tG-k6o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ce1-uv-gz0"/>
+                            <constraint firstItem="Qzl-FL-eoS" firstAttribute="centerX" secondItem="eNY-tG-k6o" secondAttribute="centerX" id="4YS-Ca-kbS"/>
+                            <constraint firstItem="eNY-tG-k6o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="Ce1-uv-gz0"/>
                             <constraint firstItem="eNY-tG-k6o" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="DMt-eb-73k"/>
                             <constraint firstItem="eNY-tG-k6o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dv2-Bm-Wuv"/>
+                            <constraint firstItem="Qzl-FL-eoS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="105" id="R0m-jf-Ude"/>
+                            <constraint firstItem="Qzl-FL-eoS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="TSC-n2-NM0"/>
                             <constraint firstAttribute="bottomMargin" secondItem="eNY-tG-k6o" secondAttribute="bottom" constant="-34" id="lXc-vO-CUI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
