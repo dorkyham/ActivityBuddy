@@ -127,12 +127,14 @@ extension HomeController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cellTemp  = tableView.dequeueReusableCell(withIdentifier: "tempCell", for: indexPath) as? TempViewCell
+            cellTemp?.selectionStyle = .none
             cellTemp?.cityLabel.text = UserDefaults.standard.string(forKey: "currentCity")
             cellTemp?.tempLabel.text = UserDefaults.standard.string(forKey: "currentTemp")
             cellTemp?.weatherLabel.text = UserDefaults.standard.string(forKey: "currentWeather")
             return cellTemp!
         }
             let cell  = tableView.dequeueReusableCell(withIdentifier: "cityCell", for: indexPath) as? CitiesListCell
+            cell?.accessoryType = .disclosureIndicator
             cell?.cityLabel.text = cities?[indexPath.row - 1].name
             return cell!
     }

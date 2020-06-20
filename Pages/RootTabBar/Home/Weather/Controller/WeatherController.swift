@@ -17,7 +17,7 @@ class WeatherController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = cityName
+        navigationItem.title = "Details"
         WeatherReader().readData(stringUrl: JSONurl) { (data) in
             self.data = data
         }

@@ -28,7 +28,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
-
             let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
                 
             if !launchedBefore {

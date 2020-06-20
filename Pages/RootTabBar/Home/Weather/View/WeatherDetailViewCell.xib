@@ -17,8 +17,8 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nsJ-c2-1VY">
-                        <rect key="frame" x="16" y="12" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="16" y="12" width="49" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -32,8 +32,8 @@
                 <constraints>
                     <constraint firstItem="6Xh-c7-BnT" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="KWQ-0N-vlO"/>
                     <constraint firstItem="nsJ-c2-1VY" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ue1-Hn-9ME"/>
-                    <constraint firstItem="nsJ-c2-1VY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-43" id="X6u-Q7-4J4"/>
-                    <constraint firstItem="6Xh-c7-BnT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-44" id="f7B-Li-bcY"/>
+                    <constraint firstItem="nsJ-c2-1VY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-32" id="X6u-Q7-4J4"/>
+                    <constraint firstItem="6Xh-c7-BnT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-33" id="f7B-Li-bcY"/>
                     <constraint firstItem="6Xh-c7-BnT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="giu-I1-Ojf"/>
                     <constraint firstItem="nsJ-c2-1VY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="rel-TZ-p4M"/>
                 </constraints>
@@ -43,7 +43,7 @@
                 <outlet property="dataLabel" destination="6Xh-c7-BnT" id="Nn6-m4-Puo"/>
                 <outlet property="titleLabel" destination="nsJ-c2-1VY" id="SkP-96-SNf"/>
             </connections>
-            <point key="canvasLocation" x="139" y="104"/>
+            <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
         </tableViewCell>
     </objects>
 </document>

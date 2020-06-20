@@ -21,14 +21,14 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="188" id="8iI-DM-fp1"/>
                         </constraints>
-                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="4xP-LW-yIU" firstAttribute="top" secondItem="SWi-56-ak0" secondAttribute="topMargin" constant="-43" id="UxX-My-qeu"/>
+                    <constraint firstItem="4xP-LW-yIU" firstAttribute="top" secondItem="SWi-56-ak0" secondAttribute="topMargin" constant="-32" id="UxX-My-qeu"/>
                     <constraint firstItem="4xP-LW-yIU" firstAttribute="leading" secondItem="SWi-56-ak0" secondAttribute="leadingMargin" id="XOJ-85-O8e"/>
                     <constraint firstItem="4xP-LW-yIU" firstAttribute="centerY" secondItem="SWi-56-ak0" secondAttribute="centerY" id="aee-t7-9We"/>
                 </constraints>
