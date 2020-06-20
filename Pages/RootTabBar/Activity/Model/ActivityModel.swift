@@ -10,15 +10,16 @@ import UIKit
 import CoreData
 
 struct ActivityModel{
-    let title: String
-    let duration: Int
-    let date : Date
-    let calories : Int
+    var title: String
+    var duration: Int
+    var date : Date
+    var calories : Int
+    var id:String
 }
 
 class ActivityStore {
     // fungsi tambah data
-    func create(_ title:String, _ duration:Int, _ date:Date, _ calories: Int){
+    func create(_ title:String, _ duration:Int, _ date:Date, _ calories: Int,  _ id: String){
         
         // referensi ke AppDelegate
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
@@ -35,6 +36,7 @@ class ActivityStore {
         insert.setValue(duration, forKey: "duration")
         insert.setValue(date, forKey: "date")
         insert.setValue(calories, forKey: "calories")
+        insert.setValue(id, forKey: "id")
         
         do{
             // save data ke entity user core data
@@ -65,8 +67,8 @@ class ActivityStore {
             result.forEach{ activity in
                 activities.append(
                     ActivityModel(
-                        title: activity.value(forKey: "title") as! String, duration: activity.value(forKey: "duration") as! Int, date: activity.value(forKey: "date") as! Date, calories: activity.value(forKey: "calories") as! Int
-                    )
+                        title: activity.value(forKey: "title") as! String, duration: activity.value(forKey: "duration") as! Int, date: activity.value(forKey: "date") as! Date, calories: activity.value(forKey: "calories") as! Int,
+                        id: activity.value(forKey: "id") as? String ?? "")
                 )
             }
         }catch let err{
@@ -98,4 +100,33 @@ class ActivityStore {
             print(err)
         }
     }
+    
+    
+    func update(_ duration:Int, _ date:Date, _ calories: Int, id:String){
+    
+        // referensi ke AppDelegate
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+    
+        // managed context
+        let managedContext = appDelegate.persistentContainer.viewContext
+    
+        // fetch data to delete
+        let fetchRequest:NSFetchRequest<NSFetchRequestResult> = NSFetchRequest.init(entityName: "Activity")
+            fetchRequest.predicate = NSPredicate(format: "id == %@", id)
+            print(id)
+        do{
+            let fetch = try managedContext.fetch(fetchRequest)
+            let dataToUpdate = fetch[0] as! NSManagedObject
+            dataToUpdate.setValue(duration, forKey: "duration")
+            dataToUpdate.setValue(date, forKey: "date")
+            dataToUpdate.setValue(calories, forKey: "calories")
+            
+            try managedContext.save()
+            print("saved")
+        }catch let err{
+                print(err)
+        }
+    
+    }
+    
 }

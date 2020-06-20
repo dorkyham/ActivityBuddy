@@ -14,6 +14,7 @@ class ActivityController: UIViewController {
     
     @IBOutlet weak var activityTableView: UITableView!
     
+    @IBOutlet weak var stepsLabel: UILabel!
     var data : [ActivityModel]?
     var calories : Int? = 0
     
@@ -21,17 +22,28 @@ class ActivityController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.data = ActivityStore().retrieve()
         self.loadTableView()
     
-        for oneData in data!{
-            calories! += oneData.calories
-        }
         
-        caloriesLabel.text = "\(calories ?? 0)"
+        stepsLabel.text = "0"
         // Do any additional setup after loading the view.
         self.navigationItem.hidesBackButton = true
         self.navigationController?.navigationBar.isHidden = false
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        calories = 0
+        
+        self.data = ActivityStore().retrieve()
+        for oneData in data!{
+            calories! += oneData.calories
+        }
+        activityTableView.reloadData()
+        caloriesLabel.text = "\(calories ?? 0)"
     }
     
     func loadTableView(){
@@ -41,6 +53,9 @@ class ActivityController: UIViewController {
         activityTableView.reloadData()
     }
     
+    @IBAction func showDataIsTapped(_ sender: Any) {
+        
+    }
     
     @IBAction func writeIsTapped(_ sender: Any) {
         print("button write is tapped")
@@ -57,6 +72,7 @@ class ActivityController: UIViewController {
     @objc func reloadTable() {
           DispatchQueue.main.async { //please do all interface updates in main thread only
           self.activityTableView.reloadData()
+          self.viewWillAppear(true)
     } }
     /*
     // MARK: - Navigation

@@ -49,7 +49,8 @@ class PostController: UIViewController {
         else{
             let duration:Int? = Int(durationTF!.text!)
             let calories:Int? = Int(caloriesTF!.text!)
-            ActivityStore().create(titleTF.text!, duration!, date!, calories!)
+            let id:String? = generatePostID(length: 10)
+            ActivityStore().create(titleTF.text!, duration!, date!, calories!, id!)
             print("data saved")
             let alert = UIAlertController(title: "Data Saved", message: "Your activity has been saved", preferredStyle: UIAlertController.Style.alert)
             let action = UIAlertAction(title: "Ok", style: .default) { (action) -> Void in
@@ -68,10 +69,10 @@ class PostController: UIViewController {
         }
     }
     
-    func goToActivity(){
-       
+    func generatePostID(length:Int) -> String{
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return String((0..<length).map{ _ in letters.randomElement()! })
     }
-    
     
     @objc func dateChanged (datePicker : UIDatePicker, activeTF : UITextField) {
            let dateFormatter = DateFormatter()
