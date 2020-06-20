@@ -55,7 +55,11 @@ extension WeatherController : UITableViewDelegate, UITableViewDataSource {
             cellTemp?.tempLabel?.text = data?.temp
             cellTemp?.cityLabel.text = cityName
             cellTemp?.weatherLabel.text = data?.main
+            print(data?.icon)
             
+            WeatherReader().loadImage(url: (data?.icon)!) { (image) in
+                cellTemp?.iconWeather.image = image
+            }
             return cellTemp!
         }
 

@@ -18,9 +18,25 @@ struct WeatherDetailModel {
     var speed:Double?
     var feels_like:String?
     var pressure:Int?
+    var icon:String?
 }
 
 struct WeatherReader {
+    
+    func loadImage(url:String, completionHandler: @escaping (UIImage) -> ()) {
+        let url = URL(string: url)
+        var image : UIImage?
+        let task = URLSession.shared.dataTask(with: url!) { data, response, error in
+            guard let data = data, error == nil else { return }
+
+            DispatchQueue.main.async() {    // execute on main thread
+                image = UIImage(data: data)
+                completionHandler(image!)
+            }
+        }
+        task.resume()
+    }
+    
     func readData(stringUrl:String?, completionHandler: @escaping ((WeatherDetailModel) -> ())){
         guard let url = URL(string: stringUrl!) else {return}
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -38,7 +54,8 @@ struct WeatherReader {
                     let item = weather?[0] as? [String : Any]
                     let desc = item!["description"] as? String
                     let main = item!["main"] as? String
-                    
+                    let icon = item!["icon"] as? String
+                    let iconURL = "http://openweathermap.org/img/wn/\(icon ?? "")@2x.png"
                     var sunrise:String?
                     var sunset:String?
                     var windSpeed: Double?
@@ -66,7 +83,7 @@ struct WeatherReader {
                             let feelsLikeString = String(format: "%.1f", tempFeelsLike ?? 0)
                             
         
-                            completionHandler(WeatherDetailModel(main:main, desc:desc, temp: string, humidity: humidity, sunrise: sunrise, sunset: sunset, speed: windSpeed, feels_like: feelsLikeString, pressure: pressure))
+                            completionHandler(WeatherDetailModel(main:main, desc:desc, temp: string, humidity: humidity, sunrise: sunrise, sunset: sunset, speed: windSpeed, feels_like: feelsLikeString, pressure: pressure, icon:iconURL))
                         }
                         
                     

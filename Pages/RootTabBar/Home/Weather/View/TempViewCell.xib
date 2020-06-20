@@ -39,6 +39,9 @@
                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YeY-DS-jMk">
+                        <rect key="frame" x="86" y="78" width="58" height="57"/>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="phY-PA-Dqe" firstAttribute="top" secondItem="z7A-Hv-cM7" secondAttribute="bottom" constant="39" id="45h-4D-9kH"/>
@@ -46,7 +49,9 @@
                     <constraint firstAttribute="trailing" secondItem="z7A-Hv-cM7" secondAttribute="trailing" constant="112" id="Fzg-DE-Lk2"/>
                     <constraint firstItem="ZQm-pA-sF3" firstAttribute="leading" secondItem="VkN-R3-EB0" secondAttribute="leading" constant="86" id="LCl-wk-Kj8"/>
                     <constraint firstItem="YOv-WX-vmY" firstAttribute="top" secondItem="ZQm-pA-sF3" secondAttribute="bottom" constant="21" id="QrH-dw-fOf"/>
+                    <constraint firstItem="YOv-WX-vmY" firstAttribute="leading" secondItem="YeY-DS-jMk" secondAttribute="trailing" constant="14" id="bVj-Q7-5bK"/>
                     <constraint firstItem="phY-PA-Dqe" firstAttribute="top" secondItem="VkN-R3-EB0" secondAttribute="top" constant="86" id="d7h-UK-h5I"/>
+                    <constraint firstItem="YeY-DS-jMk" firstAttribute="leading" secondItem="VkN-R3-EB0" secondAttribute="leading" constant="86" id="drN-Hv-fNR"/>
                     <constraint firstItem="z7A-Hv-cM7" firstAttribute="leading" secondItem="VkN-R3-EB0" secondAttribute="leading" constant="112" id="fb1-VK-got"/>
                     <constraint firstItem="YOv-WX-vmY" firstAttribute="top" secondItem="z7A-Hv-cM7" secondAttribute="bottom" constant="39" id="i51-kE-jxB"/>
                     <constraint firstItem="ZQm-pA-sF3" firstAttribute="top" secondItem="z7A-Hv-cM7" secondAttribute="bottom" id="klN-Yx-5oK"/>
@@ -54,10 +59,13 @@
                     <constraint firstItem="YOv-WX-vmY" firstAttribute="leading" secondItem="VkN-R3-EB0" secondAttribute="leading" constant="158" id="rsR-Pr-QDa"/>
                     <constraint firstAttribute="trailing" secondItem="ZQm-pA-sF3" secondAttribute="trailing" constant="86" id="sov-Fm-Gxx"/>
                     <constraint firstItem="phY-PA-Dqe" firstAttribute="leading" secondItem="YOv-WX-vmY" secondAttribute="trailing" constant="8" id="uGg-Aq-D5P"/>
+                    <constraint firstAttribute="bottom" secondItem="YeY-DS-jMk" secondAttribute="bottom" constant="24" id="wdN-TZ-jDq"/>
+                    <constraint firstItem="YeY-DS-jMk" firstAttribute="top" secondItem="VkN-R3-EB0" secondAttribute="top" constant="78" id="xJK-pi-7Y8"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="cityLabel" destination="z7A-Hv-cM7" id="Eex-dX-6TO"/>
+                <outlet property="iconWeather" destination="YeY-DS-jMk" id="AhX-iK-bYP"/>
                 <outlet property="tempLabel" destination="YOv-WX-vmY" id="8D7-5J-VSz"/>
                 <outlet property="weatherLabel" destination="ZQm-pA-sF3" id="FrF-Kf-eSg"/>
             </connections>

@@ -12,6 +12,7 @@ class TempViewCell: UITableViewCell {
 
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!
+    @IBOutlet weak var iconWeather: UIImageView!
     
     @IBOutlet weak var weatherLabel: UILabel!
     
