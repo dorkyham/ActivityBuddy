@@ -108,6 +108,8 @@ class DetailController: UIViewController {
         detailTableView.dataSource = self
         detailTableView.register(UINib(nibName: "ActivityDetailCell", bundle: nil), forCellReuseIdentifier: "detailCell")
         detailTableView.reloadData()
+        
+        detailTableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: detailTableView.frame.size.width, height: 1))
     }
 
     @objc func dateChanged (datePicker : UIDatePicker, activeTF : UITextField) {

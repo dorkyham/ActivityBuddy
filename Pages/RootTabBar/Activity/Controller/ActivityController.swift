@@ -51,6 +51,7 @@ class ActivityController: UIViewController {
         activityTableView.dataSource = self
         activityTableView.register(UINib(nibName: "DataListCell", bundle: nil), forCellReuseIdentifier: "dataCell")
         activityTableView.reloadData()
+        activityTableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: activityTableView.frame.size.width, height: 1))
     }
     
     @IBAction func showDataIsTapped(_ sender: Any) {

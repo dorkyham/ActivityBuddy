@@ -22,13 +22,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZAa-UO-nCg">
-                                <rect key="frame" x="0.0" y="165" width="414" height="288"/>
+                                <rect key="frame" x="0.0" y="165" width="414" height="731"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="XrZ-la-ehP" firstAttribute="bottom" secondItem="ZAa-UO-nCg" secondAttribute="bottom" constant="409" id="4cl-hk-p0N"/>
+                            <constraint firstItem="XrZ-la-ehP" firstAttribute="bottom" secondItem="ZAa-UO-nCg" secondAttribute="bottom" constant="-34" id="4cl-hk-p0N"/>
                             <constraint firstItem="ZAa-UO-nCg" firstAttribute="leading" secondItem="XrZ-la-ehP" secondAttribute="leading" id="D8z-yc-xf2"/>
                             <constraint firstItem="XWN-Uf-eKp" firstAttribute="leading" secondItem="v6e-V5-8gL" secondAttribute="leadingMargin" id="QL9-ft-eWE"/>
                             <constraint firstItem="ZAa-UO-nCg" firstAttribute="centerX" secondItem="v6e-V5-8gL" secondAttribute="centerX" id="b8v-Ar-cA6"/>
