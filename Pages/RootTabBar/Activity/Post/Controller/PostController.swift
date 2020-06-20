@@ -60,8 +60,6 @@ class PostController: UIViewController {
                 let vc = storyBoard.instantiateViewController(withIdentifier: "activity") as! ActivityController
                 
                 self.navigationController?.pushViewController(vc, animated: true)
-//                self.navigationController?.popViewController(animated: true)
-//                self.dismiss(animated: true, completion: nil)
 
             }
             alert.addAction(action)
@@ -75,10 +73,10 @@ class PostController: UIViewController {
     }
     
     @objc func dateChanged (datePicker : UIDatePicker, activeTF : UITextField) {
-           let dateFormatter = DateFormatter()
-           dateFormatter.dateFormat = "dd MMM y hh:mm aa"
-           exerciseTF.text = dateFormatter.string(from:datePicker.date)
-           date = datePicker.date
-       }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMM y hh:mm aa"
+        exerciseTF.text = dateFormatter.string(from:datePicker.date)
+        date = datePicker.date
+    }
 
 }

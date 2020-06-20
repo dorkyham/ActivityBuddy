@@ -15,6 +15,9 @@ class DetailController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailTableView: UITableView!
     
+    let datePicker = UIDatePicker()
+    var pickerToolBar: UIToolbar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadTableView()
@@ -27,6 +30,7 @@ class DetailController: UIViewController {
         
         self.navigationItem.rightBarButtonItem  = editButton
         // Do any additional setup after loading the view.
+        
     }
     
     
@@ -40,6 +44,18 @@ class DetailController: UIViewController {
         durationCell.detailTF.isEnabled = true
         timeCell.detailTF.isEnabled = true
         caloriesCell.detailTF.isEnabled = true
+        
+        //set form
+        durationCell.detailTF.keyboardType = .asciiCapableNumberPad
+        caloriesCell.detailTF.keyboardType = .asciiCapableNumberPad
+        self.datePicker.datePickerMode = .dateAndTime
+        self.datePicker.addTarget(self, action: #selector(dateChanged), for: .valueChanged)
+        self.datePicker.maximumDate = Date()
+        timeCell.detailTF.inputView = self.datePicker
+        timeCell.detailTF.inputAccessoryView = self.pickerToolBar
+        pickerToolBar = UIToolbar()
+        pickerToolBar.isTranslucent = true
+        pickerToolBar.sizeToFit()
     }
     
     @objc func save(){
@@ -94,6 +110,12 @@ class DetailController: UIViewController {
         detailTableView.reloadData()
     }
 
+    @objc func dateChanged (datePicker : UIDatePicker, activeTF : UITextField) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMM y hh:mm aa"
+        activeTF.text = dateFormatter.string(from:datePicker.date)
+    }
+    
     /*
     // MARK: - Navigation
 
