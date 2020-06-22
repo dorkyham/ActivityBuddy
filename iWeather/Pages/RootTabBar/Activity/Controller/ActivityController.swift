@@ -38,7 +38,6 @@ class ActivityController: UIViewController {
         
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         calories = 0
@@ -60,7 +59,7 @@ class ActivityController: UIViewController {
     }
     
     @IBAction func showDataIsTapped(_ sender: Any) {
-        
+        performSegue(withIdentifier: "goToStepData", sender: nil)
     }
     
     @IBAction func writeIsTapped(_ sender: Any) {

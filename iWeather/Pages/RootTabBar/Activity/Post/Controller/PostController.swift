@@ -26,6 +26,15 @@ class PostController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTextFieldConfig()
+        // Do any additional setup after loading the view.
+    }
+
+    func setTextFieldConfig(){
+        durationTF.attributedPlaceholder = NSAttributedString(string: "Duration", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        caloriesTF.attributedPlaceholder = NSAttributedString(string: "Estimated burned calories", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        exerciseTF.attributedPlaceholder = NSAttributedString(string: "Exercise time", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        titleTF.attributedPlaceholder = NSAttributedString(string: "Name of activity", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         durationTF.keyboardType = .asciiCapableNumberPad
         caloriesTF.keyboardType = .asciiCapableNumberPad
         self.datePicker.datePickerMode = .dateAndTime
@@ -36,9 +45,7 @@ class PostController: UIViewController {
         pickerToolBar = UIToolbar()
         pickerToolBar.isTranslucent = true
         pickerToolBar.sizeToFit()
-        // Do any additional setup after loading the view.
     }
-
     
     @IBAction func doneIsTapped(_ sender: Any) {
         if titleTF.text == "" || durationTF.text == "" || exerciseTF.text == "" || caloriesTF.text == "" {

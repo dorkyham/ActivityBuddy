@@ -16,7 +16,7 @@ class DataListCell: UITableViewCell {
     @IBOutlet weak var activityLabel: UILabel!
     
     @IBOutlet weak var dateLabel: UILabel!
-    
+    @IBOutlet weak var detailButton: UIButton!
     
     var cellNumber: Int?
     var delegate: CellProtocol?

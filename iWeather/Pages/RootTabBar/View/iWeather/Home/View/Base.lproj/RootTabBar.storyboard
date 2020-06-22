@@ -22,12 +22,13 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="lBx-TY-bmk" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F0X-IF-mbZ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="OBB-gV-kTK" kind="relationship" relationship="viewControllers" id="ddF-5h-uGT"/>
                         <segue destination="rQ6-yC-Eih" kind="relationship" relationship="viewControllers" id="0vw-pI-40v"/>
+                        <segue destination="OBB-gV-kTK" kind="relationship" relationship="viewControllers" id="ddF-5h-uGT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cLE-8p-0iH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

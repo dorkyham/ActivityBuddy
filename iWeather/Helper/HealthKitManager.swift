@@ -76,11 +76,10 @@ class HealthKitManager {
         storage.execute(query)
     }
     
-    func getAllStepsData(completion: @escaping ([Step]) -> Void){
-        var stepData : [Step]?
+    func getAllStepsDataStatisticInMonth(completion: @escaping ([HKStatistics]?) -> Void){
         let stepsQuantityType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
         let now = Date()
-        let exactlySevenDaysAgo = Calendar.current.date(byAdding: DateComponents(day: -7), to: now)!
+        let exactlySevenDaysAgo = Calendar.current.date(byAdding: DateComponents(day: -30), to: now)!
         let startOfSevenDaysAgo = Calendar.current.startOfDay(for: exactlySevenDaysAgo)
         let predicate = HKQuery.predicateForSamples(withStart: startOfSevenDaysAgo, end: now, options: .strictStartDate)
         let query = HKStatisticsCollectionQuery.init(quantityType: stepsQuantityType, quantitySamplePredicate: predicate, options: .cumulativeSum,anchorDate: startOfSevenDaysAgo, intervalComponents: DateComponents(day: 1))
@@ -90,19 +89,11 @@ class HealthKitManager {
                    // Perform proper error handling here...
                     fatalError()
                }
-                    for stats in statsCollection.statistics() {
-                        if let sum = stats.sumQuantity() {
-                                   // Get steps (they are of double type)
-                            var resultCount = 0.0
-                            resultCount = sum.doubleValue(for: HKUnit.count())
-                            stepData?.append(Step(startDate: stats.startDate, endDate: stats.endDate, stepCount:resultCount))
-                        } // end if
-                    }
             
-                    DispatchQueue.main.async {
-                        completion(stepData!)
-                    }
+                    completion(statsCollection.statistics())
                }
+        
+        storage.execute(query)
     }
 }
     

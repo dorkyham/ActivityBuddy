@@ -40,7 +40,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Weather" image="cloud" catalog="system" id="P59-Mj-ePk"/>
+                    <tabBarItem key="tabBarItem" title="Weather" image="cloud.sun" catalog="system" id="P59-Mj-ePk"/>
                     <navigationItem key="navigationItem" title="Weather" id="6dy-Dy-DrU">
                         <barButtonItem key="backBarButtonItem" title="Weather" id="gJX-Pz-mHx"/>
                     </navigationItem>
@@ -84,6 +84,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cloud" catalog="system" width="128" height="87"/>
+        <image name="cloud.sun" catalog="system" width="128" height="88"/>
     </resources>
 </document>
