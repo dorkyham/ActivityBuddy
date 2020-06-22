@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PCD-vd-aYo">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Step Data List Controller-->
+        <scene sceneID="2tZ-hi-iua">
+            <objects>
+                <viewController id="PCD-vd-aYo" customClass="StepDataListController" customModule="iWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uW9-Ow-TEJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RPq-rG-8mR">
+                                <rect key="frame" x="0.0" y="186" width="414" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Steps in Month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RA4-D9-LTd">
+                                <rect key="frame" x="28" y="82" width="164" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIr-RK-dxa">
+                                <rect key="frame" x="28" y="121" width="81" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="steps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxo-7H-fyV">
+                                <rect key="frame" x="111" y="137" width="44.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RA4-D9-LTd" firstAttribute="leading" secondItem="yIr-RK-dxa" secondAttribute="leading" id="0lM-jJ-Eyu"/>
+                            <constraint firstItem="RPq-rG-8mR" firstAttribute="centerX" secondItem="uW9-Ow-TEJ" secondAttribute="centerX" id="3m2-4W-uNf"/>
+                            <constraint firstItem="RPq-rG-8mR" firstAttribute="top" secondItem="yIr-RK-dxa" secondAttribute="bottom" constant="24" id="G7V-Qd-xW9"/>
+                            <constraint firstItem="yIr-RK-dxa" firstAttribute="baseline" secondItem="bxo-7H-fyV" secondAttribute="baseline" id="KUu-BK-poI"/>
+                            <constraint firstItem="RA4-D9-LTd" firstAttribute="top" secondItem="YU4-rJ-9Ji" secondAttribute="top" constant="38" id="MJX-wi-N3O"/>
+                            <constraint firstItem="bxo-7H-fyV" firstAttribute="leading" secondItem="yIr-RK-dxa" secondAttribute="trailing" constant="2" id="Rzq-f1-jYW"/>
+                            <constraint firstItem="RPq-rG-8mR" firstAttribute="top" secondItem="uW9-Ow-TEJ" secondAttribute="topMargin" constant="142" id="Tg2-ax-3xu"/>
+                            <constraint firstItem="RA4-D9-LTd" firstAttribute="leading" secondItem="YU4-rJ-9Ji" secondAttribute="leading" constant="28" id="bAx-J6-UmK"/>
+                            <constraint firstItem="RPq-rG-8mR" firstAttribute="centerY" secondItem="uW9-Ow-TEJ" secondAttribute="centerY" constant="93" id="eTl-lf-lxh"/>
+                            <constraint firstItem="RPq-rG-8mR" firstAttribute="leading" secondItem="YU4-rJ-9Ji" secondAttribute="leading" id="sK6-sI-CkE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YU4-rJ-9Ji"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="RPq-rG-8mR" id="62j-7M-tF0"/>
+                        <outlet property="totalSteps" destination="yIr-RK-dxa" id="AUn-jX-kSz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qaj-7H-hny" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="298.55072463768118" y="-233.03571428571428"/>
+        </scene>
+    </scenes>
+</document>

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:iWeather.xcodeproj">
+      location = "self:/Users/annisa/Documents/iWeather/ActivityBuddy.xcodeproj">
    </FileRef>
 </Workspace>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jNj-Nl-S5E">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Post Activity-->
+        <scene sceneID="mW8-NX-Fiy">
+            <objects>
+                <viewController id="jNj-Nl-S5E" customClass="PostController" customModule="iWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vnU-6k-7hP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9CI-bS-jEX">
+                                <rect key="frame" x="20" y="97" width="374" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Exercise Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B2F-IM-4jY">
+                                <rect key="frame" x="20" y="225" width="374" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Estimated Calories Burned" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MLh-l8-Qx0">
+                                <rect key="frame" x="20" y="288" width="374" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Duration (Minutes)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TQ0-gP-xoy">
+                                <rect key="frame" x="20" y="161" width="374" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9CI-bS-jEX" firstAttribute="leading" secondItem="TQ0-gP-xoy" secondAttribute="leading" id="0Ld-hd-dyN"/>
+                            <constraint firstItem="9CI-bS-jEX" firstAttribute="trailing" secondItem="TQ0-gP-xoy" secondAttribute="trailing" id="0fc-YE-tXE"/>
+                            <constraint firstItem="9CI-bS-jEX" firstAttribute="leading" secondItem="vnU-6k-7hP" secondAttribute="leadingMargin" id="1fZ-0y-mLG"/>
+                            <constraint firstItem="9CI-bS-jEX" firstAttribute="trailing" secondItem="vnU-6k-7hP" secondAttribute="trailingMargin" id="3Xf-ja-oG6"/>
+                            <constraint firstItem="TQ0-gP-xoy" firstAttribute="leading" secondItem="B2F-IM-4jY" secondAttribute="leading" id="SDn-hP-arQ"/>
+                            <constraint firstItem="MLh-l8-Qx0" firstAttribute="top" secondItem="B2F-IM-4jY" secondAttribute="bottom" constant="29" id="bax-gr-8kb"/>
+                            <constraint firstItem="9CI-bS-jEX" firstAttribute="top" secondItem="ka7-eI-EGp" secondAttribute="top" constant="53" id="hKh-RJ-gHV"/>
+                            <constraint firstItem="TQ0-gP-xoy" firstAttribute="trailing" secondItem="B2F-IM-4jY" secondAttribute="trailing" id="itv-2z-V2Z"/>
+                            <constraint firstItem="TQ0-gP-xoy" firstAttribute="top" secondItem="9CI-bS-jEX" secondAttribute="bottom" constant="30" id="lav-Ps-aBc"/>
+                            <constraint firstItem="B2F-IM-4jY" firstAttribute="top" secondItem="TQ0-gP-xoy" secondAttribute="bottom" constant="30" id="mAB-4s-8Eb"/>
+                            <constraint firstItem="B2F-IM-4jY" firstAttribute="trailing" secondItem="MLh-l8-Qx0" secondAttribute="trailing" id="q1t-xB-Uck"/>
+                            <constraint firstItem="B2F-IM-4jY" firstAttribute="leading" secondItem="MLh-l8-Qx0" secondAttribute="leading" id="sjM-6a-WVQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ka7-eI-EGp"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Post Activity" id="CSx-mP-dfX">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="Vk9-t5-tRp">
+                            <connections>
+                                <action selector="doneIsTapped:" destination="jNj-Nl-S5E" id="p2I-dt-jGD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="caloriesTF" destination="MLh-l8-Qx0" id="ZgY-JS-SFL"/>
+                        <outlet property="durationTF" destination="TQ0-gP-xoy" id="4ij-ik-HKK"/>
+                        <outlet property="exerciseTF" destination="B2F-IM-4jY" id="fCn-0O-8JT"/>
+                        <outlet property="titleTF" destination="9CI-bS-jEX" id="EIB-Po-RVR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4bq-34-VcD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3618.840579710145" y="1494.6428571428571"/>
+        </scene>
+    </scenes>
+</document>
