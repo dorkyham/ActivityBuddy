@@ -13,12 +13,11 @@ struct FoodModel {
     var name:String?
     var calories:Int?
     var date:Date?
-    var foodType:Int?
 }
 
 struct FoodManager {
     // fungsi tambah data
-    func create(_ title:String, _ foodType:Int, _ date:Date, _ calories: Int){
+    func create(_ title:String, _ date:Date, _ calories: Int){
         
         // referensi ke AppDelegate
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
@@ -27,12 +26,11 @@ struct FoodManager {
         let managedContext = appDelegate.persistentContainer.viewContext
         
         // refensi entity yang telah dibuat sebelumnya
-        let entity = NSEntityDescription.entity(forEntityName: "Activity", in: managedContext)
+        let entity = NSEntityDescription.entity(forEntityName: "Food", in: managedContext)
         
         // entity body
         let insert = NSManagedObject(entity: entity!, insertInto: managedContext)
         insert.setValue(title, forKey: "name")
-        insert.setValue(foodType, forKey: "foodType")
         insert.setValue(date, forKey: "date")
         insert.setValue(calories, forKey: "calories")
         
@@ -57,14 +55,14 @@ struct FoodManager {
         let managedContext = appDelegate.persistentContainer.viewContext
         
         // fetch data
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Activity")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Food")
         
         do{
             let result = try managedContext.fetch(fetchRequest) as! [NSManagedObject]
             
             result.forEach{ food in
                 foods.append(
-                    FoodModel(name: food.value(forKey: "name") as! String, calories: food.value(forKey: "calories") as! Int, date: food.value(forKey: "date") as! Date, foodType: food.value(forKey: "foodType") as! Int)
+                    FoodModel(name: (food.value(forKey: "name") as! String), calories: (food.value(forKey: "calories") as! Int), date: (food.value(forKey: "date") as! Date))
                 )
             }
         }catch let err{
@@ -94,6 +92,21 @@ struct FoodManager {
             try managedContext.save()
         }catch let err{
             print(err)
+        }
+    }
+    
+    func deleteAllData(){
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        let context = delegate.persistentContainer.viewContext
+
+        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Food")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
+
+        do {
+            try context.execute(deleteRequest)
+            try context.save()
+        } catch {
+            print ("There was an error")
         }
     }
 

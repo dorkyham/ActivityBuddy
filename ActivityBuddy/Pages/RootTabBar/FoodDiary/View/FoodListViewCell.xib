@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WlF-FW-bR5">
-                        <rect key="frame" x="262" y="12" width="42" height="21"/>
+                        <rect key="frame" x="262" y="20" width="42" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="42" id="Nl5-hr-ROb"/>
                         </constraints>
@@ -31,13 +31,23 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzV-w2-q36">
+                        <rect key="frame" x="253" y="5" width="49" height="20"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="WlF-FW-bR5" firstAttribute="leading" secondItem="s3C-nE-oBQ" secondAttribute="trailing" constant="33" id="2SR-aI-ufZ"/>
                     <constraint firstItem="s3C-nE-oBQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="C6p-Fl-9kh"/>
-                    <constraint firstItem="WlF-FW-bR5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="DMa-um-7ht"/>
+                    <constraint firstAttribute="trailing" secondItem="hzV-w2-q36" secondAttribute="trailing" constant="18" id="Cnv-0P-ord"/>
+                    <constraint firstItem="WlF-FW-bR5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="DMa-um-7ht"/>
                     <constraint firstItem="s3C-nE-oBQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="EHC-qh-od9"/>
-                    <constraint firstAttribute="bottom" secondItem="WlF-FW-bR5" secondAttribute="bottom" constant="11" id="cUn-Nq-14C"/>
+                    <constraint firstItem="hzV-w2-q36" firstAttribute="leading" secondItem="s3C-nE-oBQ" secondAttribute="trailing" constant="24" id="U95-3w-AnX"/>
+                    <constraint firstItem="hzV-w2-q36" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="XZn-yw-YNs"/>
+                    <constraint firstItem="WlF-FW-bR5" firstAttribute="top" secondItem="hzV-w2-q36" secondAttribute="bottom" constant="-5" id="YYt-id-9Ik"/>
+                    <constraint firstAttribute="bottom" secondItem="WlF-FW-bR5" secondAttribute="bottom" constant="3" id="cUn-Nq-14C"/>
                     <constraint firstAttribute="bottom" secondItem="s3C-nE-oBQ" secondAttribute="bottom" constant="11" id="ksI-uT-JhT"/>
                     <constraint firstAttribute="trailing" secondItem="WlF-FW-bR5" secondAttribute="trailing" constant="16" id="stL-a3-iBR"/>
                 </constraints>

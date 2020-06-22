@@ -26,12 +26,20 @@ class HomeController: UIViewController, CLLocationManagerDelegate {
         checkLocation()
     }
     
+    
     func loadTableView(){
         citiesTableView.delegate = self
         citiesTableView.dataSource = self
         citiesTableView.register(UINib(nibName: "TempViewCell", bundle: nil), forCellReuseIdentifier: "tempCell")
         citiesTableView.register(UINib(nibName: "CitiesListCell", bundle: nil), forCellReuseIdentifier: "cityCell")
         citiesTableView.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated) // No need for semicolon
+        DispatchQueue.main.async {
+            self.citiesTableView.reloadData()
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

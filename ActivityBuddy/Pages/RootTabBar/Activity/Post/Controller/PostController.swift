@@ -30,6 +30,7 @@ class PostController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    
     func setTextFieldConfig(){
         durationTF.attributedPlaceholder = NSAttributedString(string: "Duration in minutes", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         caloriesTF.attributedPlaceholder = NSAttributedString(string: "Estimated burned calories", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
