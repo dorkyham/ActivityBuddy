@@ -7,6 +7,11 @@
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="Breakfast" representedClassName="Breakfast" syncable="YES" codeGenerationType="class">
+        <attribute name="calories" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="foodType" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="City" representedClassName="City" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
@@ -15,5 +20,6 @@
     <elements>
         <element name="Activity" positionX="-54" positionY="18" width="128" height="118"/>
         <element name="City" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Breakfast" positionX="-36" positionY="54" width="128" height="88"/>
     </elements>
 </model>

@@ -41,6 +41,15 @@
 		B0581FD0249DEA4200170A8A /* ActivityDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0581FCE249DEA4200170A8A /* ActivityDetailCell.swift */; };
 		B0581FD1249DEA4200170A8A /* ActivityDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0581FCF249DEA4200170A8A /* ActivityDetailCell.xib */; };
 		B0581FD7249DEFFF00170A8A /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0581FD5249DEFFF00170A8A /* Post.storyboard */; };
+		B0BC1D0924A0988A00DA1B8F /* FoodDiary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0BC1D0724A0988A00DA1B8F /* FoodDiary.storyboard */; };
+		B0BC1D0C24A098F900DA1B8F /* HeaderFoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC1D0A24A098F900DA1B8F /* HeaderFoodCell.swift */; };
+		B0BC1D0D24A098F900DA1B8F /* HeaderFoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0BC1D0B24A098F900DA1B8F /* HeaderFoodCell.xib */; };
+		B0BC1D1024A09B6100DA1B8F /* FoodListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC1D0E24A09B6100DA1B8F /* FoodListViewCell.swift */; };
+		B0BC1D1124A09B6100DA1B8F /* FoodListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0BC1D0F24A09B6100DA1B8F /* FoodListViewCell.xib */; };
+		B0BC1D1324A09C3A00DA1B8F /* FoodDiaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC1D1224A09C3A00DA1B8F /* FoodDiaryController.swift */; };
+		B0BC1D1524A09D3700DA1B8F /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC1D1424A09D3700DA1B8F /* FoodModel.swift */; };
+		B0BC1D1824A0A68900DA1B8F /* AddFoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC1D1624A0A68900DA1B8F /* AddFoodCell.swift */; };
+		B0BC1D1924A0A68900DA1B8F /* AddFoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0BC1D1724A0A68900DA1B8F /* AddFoodCell.xib */; };
 		B0BFD04D24A05B490033B2F4 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BFD04C24A05B490033B2F4 /* HealthKitManager.swift */; };
 		B0BFD05624A0654C0033B2F4 /* StepDataListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BFD05524A0654C0033B2F4 /* StepDataListController.swift */; };
 		B0BFD05824A065780033B2F4 /* StepDataList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0BFD05724A065780033B2F4 /* StepDataList.storyboard */; };
@@ -105,6 +114,15 @@
 		B0581FCE249DEA4200170A8A /* ActivityDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailCell.swift; sourceTree = "<group>"; };
 		B0581FCF249DEA4200170A8A /* ActivityDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityDetailCell.xib; sourceTree = "<group>"; };
 		B0581FD6249DEFFF00170A8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Pages/RootTabBar/Activity/View/Pages/RootTabBar/View/iWeather/Home/View/Base.lproj/Post.storyboard; sourceTree = "<group>"; };
+		B0BC1D0824A0988A00DA1B8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ActivityBuddy/Pages/RootTabBar/View/iWeather/Home/View/Base.lproj/FoodDiary.storyboard; sourceTree = "<group>"; };
+		B0BC1D0A24A098F900DA1B8F /* HeaderFoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderFoodCell.swift; sourceTree = "<group>"; };
+		B0BC1D0B24A098F900DA1B8F /* HeaderFoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderFoodCell.xib; sourceTree = "<group>"; };
+		B0BC1D0E24A09B6100DA1B8F /* FoodListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewCell.swift; sourceTree = "<group>"; };
+		B0BC1D0F24A09B6100DA1B8F /* FoodListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodListViewCell.xib; sourceTree = "<group>"; };
+		B0BC1D1224A09C3A00DA1B8F /* FoodDiaryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDiaryController.swift; sourceTree = "<group>"; };
+		B0BC1D1424A09D3700DA1B8F /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
+		B0BC1D1624A0A68900DA1B8F /* AddFoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodCell.swift; sourceTree = "<group>"; };
+		B0BC1D1724A0A68900DA1B8F /* AddFoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddFoodCell.xib; sourceTree = "<group>"; };
 		B0BFD04C24A05B490033B2F4 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		B0BFD05524A0654C0033B2F4 /* StepDataListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepDataListController.swift; sourceTree = "<group>"; };
 		B0BFD05724A065780033B2F4 /* StepDataList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StepDataList.storyboard; sourceTree = "<group>"; };
@@ -302,6 +320,7 @@
 		B0581FAA249DC32900170A8A /* RootTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				B0BC1D0324A0982A00DA1B8F /* FoodDiary */,
 				B0581FB2249DC7D000170A8A /* Activity */,
 				B0581F7E249CCB9300170A8A /* Home */,
 				B0581FAC249DC33D00170A8A /* Controller */,
@@ -413,6 +432,46 @@
 			isa = PBXGroup;
 			children = (
 				B0581FD5249DEFFF00170A8A /* Post.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B0BC1D0324A0982A00DA1B8F /* FoodDiary */ = {
+			isa = PBXGroup;
+			children = (
+				B0BC1D0624A0985600DA1B8F /* View */,
+				B0BC1D0524A0985000DA1B8F /* Controller */,
+				B0BC1D0424A0983700DA1B8F /* Model */,
+			);
+			path = FoodDiary;
+			sourceTree = "<group>";
+		};
+		B0BC1D0424A0983700DA1B8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B0BC1D1424A09D3700DA1B8F /* FoodModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B0BC1D0524A0985000DA1B8F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B0BC1D1224A09C3A00DA1B8F /* FoodDiaryController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B0BC1D0624A0985600DA1B8F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B0BC1D0724A0988A00DA1B8F /* FoodDiary.storyboard */,
+				B0BC1D0A24A098F900DA1B8F /* HeaderFoodCell.swift */,
+				B0BC1D0B24A098F900DA1B8F /* HeaderFoodCell.xib */,
+				B0BC1D0E24A09B6100DA1B8F /* FoodListViewCell.swift */,
+				B0BC1D0F24A09B6100DA1B8F /* FoodListViewCell.xib */,
+				B0BC1D1624A0A68900DA1B8F /* AddFoodCell.swift */,
+				B0BC1D1724A0A68900DA1B8F /* AddFoodCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -554,12 +613,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0BC1D0924A0988A00DA1B8F /* FoodDiary.storyboard in Resources */,
+				B0BC1D1124A09B6100DA1B8F /* FoodListViewCell.xib in Resources */,
 				B0BFD05824A065780033B2F4 /* StepDataList.storyboard in Resources */,
 				B0581F83249CCC8D00170A8A /* CitiesListCell.xib in Resources */,
 				B0581FB1249DC7BF00170A8A /* Activity.storyboard in Resources */,
+				B0BC1D0D24A098F900DA1B8F /* HeaderFoodCell.xib in Resources */,
 				B0581F95249CDAD100170A8A /* Weather.storyboard in Resources */,
 				B0581FD1249DEA4200170A8A /* ActivityDetailCell.xib in Resources */,
 				B0581F5B249CCB7200170A8A /* Home.storyboard in Resources */,
+				B0BC1D1924A0A68900DA1B8F /* AddFoodCell.xib in Resources */,
 				B0581FCB249DE97700170A8A /* Detail.storyboard in Resources */,
 				B0581F58249CCB7200170A8A /* Preview Assets.xcassets in Resources */,
 				B0581FA8249DC30900170A8A /* RootTabBar.storyboard in Resources */,
@@ -595,6 +658,7 @@
 				B0581F8F249CCF9400170A8A /* DataStore.swift in Sources */,
 				B0581FAE249DC50C00170A8A /* RootTabBarController.swift in Sources */,
 				B0581F85249CCC9B00170A8A /* CitiesListCell.swift in Sources */,
+				B0BC1D1524A09D3700DA1B8F /* FoodModel.swift in Sources */,
 				B0BFD04D24A05B490033B2F4 /* HealthKitManager.swift in Sources */,
 				B0581F51249CCB6F00170A8A /* iWeather.xcdatamodeld in Sources */,
 				B0581F9F249CE2DE00170A8A /* TempViewCell.swift in Sources */,
@@ -602,14 +666,18 @@
 				B0581FCD249DE99D00170A8A /* DetailController.swift in Sources */,
 				B0581F89249CCEBA00170A8A /* CityListModel.swift in Sources */,
 				B0BFD05624A0654C0033B2F4 /* StepDataListController.swift in Sources */,
+				B0BC1D0C24A098F900DA1B8F /* HeaderFoodCell.swift in Sources */,
 				B0581F4C249CCB6F00170A8A /* AppDelegate.swift in Sources */,
 				B0581F4E249CCB6F00170A8A /* SceneDelegate.swift in Sources */,
 				B0581FC0249DCFB900170A8A /* PostController.swift in Sources */,
 				B0581F97249CDAED00170A8A /* WeatherController.swift in Sources */,
 				B0581F87249CCD6C00170A8A /* HomeController.swift in Sources */,
+				B0BC1D1024A09B6100DA1B8F /* FoodListViewCell.swift in Sources */,
 				B0581FD0249DEA4200170A8A /* ActivityDetailCell.swift in Sources */,
 				B0581F9C249CDD4800170A8A /* WeatherDetailViewCell.swift in Sources */,
 				B0581FB7249DC84500170A8A /* ActivityController.swift in Sources */,
+				B0BC1D1324A09C3A00DA1B8F /* FoodDiaryController.swift in Sources */,
+				B0BC1D1824A0A68900DA1B8F /* AddFoodCell.swift in Sources */,
 				B0581F99249CDB1800170A8A /* WeatherDetailModel.swift in Sources */,
 				B0581FBA249DC98F00170A8A /* DataListCell.swift in Sources */,
 			);
@@ -685,6 +753,14 @@
 				B0581FD6249DEFFF00170A8A /* Base */,
 			);
 			name = Post.storyboard;
+			sourceTree = "<group>";
+		};
+		B0BC1D0724A0988A00DA1B8F /* FoodDiary.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0BC1D0824A0988A00DA1B8F /* Base */,
+			);
+			name = FoodDiary.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
