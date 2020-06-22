@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HealthKit
 
 class ActivityController: UIViewController {
 
@@ -26,11 +27,15 @@ class ActivityController: UIViewController {
         self.data = ActivityStore().retrieve()
         self.loadTableView()
     
-        
-        stepsLabel.text = "0"
+        HealthKitManager().getStepDataAfterRequestAuthorization { (result) in
+            self.stepsLabel.text = "\(result)"
+        }
+        //stepsLabel.text = "0"
         // Do any additional setup after loading the view.
         self.navigationItem.hidesBackButton = true
         self.navigationController?.navigationBar.isHidden = false
+        
+        
     }
     
     

@@ -41,6 +41,9 @@
 		B0581FD0249DEA4200170A8A /* ActivityDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0581FCE249DEA4200170A8A /* ActivityDetailCell.swift */; };
 		B0581FD1249DEA4200170A8A /* ActivityDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0581FCF249DEA4200170A8A /* ActivityDetailCell.xib */; };
 		B0581FD7249DEFFF00170A8A /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0581FD5249DEFFF00170A8A /* Post.storyboard */; };
+		B0BFD04D24A05B490033B2F4 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BFD04C24A05B490033B2F4 /* HealthKitManager.swift */; };
+		B0BFD05624A0654C0033B2F4 /* StepDataListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BFD05524A0654C0033B2F4 /* StepDataListController.swift */; };
+		B0BFD05824A065780033B2F4 /* StepDataList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0BFD05724A065780033B2F4 /* StepDataList.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +105,9 @@
 		B0581FCE249DEA4200170A8A /* ActivityDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailCell.swift; sourceTree = "<group>"; };
 		B0581FCF249DEA4200170A8A /* ActivityDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityDetailCell.xib; sourceTree = "<group>"; };
 		B0581FD6249DEFFF00170A8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Pages/RootTabBar/Activity/View/Pages/RootTabBar/View/iWeather/Home/View/Base.lproj/Post.storyboard; sourceTree = "<group>"; };
+		B0BFD04C24A05B490033B2F4 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		B0BFD05524A0654C0033B2F4 /* StepDataListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepDataListController.swift; sourceTree = "<group>"; };
+		B0BFD05724A065780033B2F4 /* StepDataList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StepDataList.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +139,6 @@
 		B0581F3F249CCB6F00170A8A = {
 			isa = PBXGroup;
 			children = (
-				B0581FA9249DC31600170A8A /* Pages */,
 				B0581F4A249CCB6F00170A8A /* iWeather */,
 				B0581F64249CCB7200170A8A /* iWeatherTests */,
 				B0581F6F249CCB7200170A8A /* iWeatherUITests */,
@@ -156,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				B0581FA2249DB88F00170A8A /* iWeather.entitlements */,
+				B0581FA9249DC31600170A8A /* Pages */,
 				B0581F8D249CCF8700170A8A /* Helper */,
 				B0581F4B249CCB6F00170A8A /* AppDelegate.swift */,
 				B0581F4D249CCB6F00170A8A /* SceneDelegate.swift */,
@@ -234,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				B0581F8E249CCF9400170A8A /* DataStore.swift */,
+				B0BFD04C24A05B490033B2F4 /* HealthKitManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -323,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				B0581FD2249DEFDD00170A8A /* Post */,
+				B0BFD05124A065120033B2F4 /* StepData */,
 				B0581FC5249DE95500170A8A /* Detail */,
 				B0581FB5249DC7E200170A8A /* Controller */,
 				B0581FB4249DC7DD00170A8A /* View */,
@@ -407,6 +415,39 @@
 				B0581FD5249DEFFF00170A8A /* Post.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B0BFD05124A065120033B2F4 /* StepData */ = {
+			isa = PBXGroup;
+			children = (
+				B0BFD05424A065280033B2F4 /* Controller */,
+				B0BFD05324A065230033B2F4 /* View */,
+				B0BFD05224A0651C0033B2F4 /* Model */,
+			);
+			path = StepData;
+			sourceTree = "<group>";
+		};
+		B0BFD05224A0651C0033B2F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B0BFD05324A065230033B2F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B0BFD05724A065780033B2F4 /* StepDataList.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B0BFD05424A065280033B2F4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B0BFD05524A0654C0033B2F4 /* StepDataListController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -513,6 +554,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0BFD05824A065780033B2F4 /* StepDataList.storyboard in Resources */,
 				B0581F83249CCC8D00170A8A /* CitiesListCell.xib in Resources */,
 				B0581FB1249DC7BF00170A8A /* Activity.storyboard in Resources */,
 				B0581F95249CDAD100170A8A /* Weather.storyboard in Resources */,
@@ -553,11 +595,13 @@
 				B0581F8F249CCF9400170A8A /* DataStore.swift in Sources */,
 				B0581FAE249DC50C00170A8A /* RootTabBarController.swift in Sources */,
 				B0581F85249CCC9B00170A8A /* CitiesListCell.swift in Sources */,
+				B0BFD04D24A05B490033B2F4 /* HealthKitManager.swift in Sources */,
 				B0581F51249CCB6F00170A8A /* iWeather.xcdatamodeld in Sources */,
 				B0581F9F249CE2DE00170A8A /* TempViewCell.swift in Sources */,
 				B0581FBE249DCBAD00170A8A /* ActivityModel.swift in Sources */,
 				B0581FCD249DE99D00170A8A /* DetailController.swift in Sources */,
 				B0581F89249CCEBA00170A8A /* CityListModel.swift in Sources */,
+				B0BFD05624A0654C0033B2F4 /* StepDataListController.swift in Sources */,
 				B0581F4C249CCB6F00170A8A /* AppDelegate.swift in Sources */,
 				B0581F4E249CCB6F00170A8A /* SceneDelegate.swift in Sources */,
 				B0581FC0249DCFB900170A8A /* PostController.swift in Sources */,
