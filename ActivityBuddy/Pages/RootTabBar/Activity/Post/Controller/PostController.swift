@@ -32,10 +32,10 @@ class PostController: UIViewController {
 
     
     func setTextFieldConfig(){
-        durationTF.attributedPlaceholder = NSAttributedString(string: "Duration in minutes", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
-        caloriesTF.attributedPlaceholder = NSAttributedString(string: "Estimated burned calories", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
-        exerciseTF.attributedPlaceholder = NSAttributedString(string: "Exercise time", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
-        titleTF.attributedPlaceholder = NSAttributedString(string: "Name of activity", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+        durationTF.attributedPlaceholder = NSAttributedString(string: "Duration in minutes", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        caloriesTF.attributedPlaceholder = NSAttributedString(string: "Estimated burned calories", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        exerciseTF.attributedPlaceholder = NSAttributedString(string: "Exercise time", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        titleTF.attributedPlaceholder = NSAttributedString(string: "Name of activity", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         durationTF.keyboardType = .asciiCapableNumberPad
         caloriesTF.keyboardType = .asciiCapableNumberPad
         self.datePicker.datePickerMode = .dateAndTime

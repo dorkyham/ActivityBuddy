@@ -26,7 +26,6 @@ class HomeController: UIViewController, CLLocationManagerDelegate {
         checkLocation()
     }
     
-    
     func loadTableView(){
         citiesTableView.delegate = self
         citiesTableView.dataSource = self

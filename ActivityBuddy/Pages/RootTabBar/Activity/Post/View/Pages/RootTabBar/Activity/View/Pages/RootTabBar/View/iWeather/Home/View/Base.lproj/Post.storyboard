@@ -10,7 +10,7 @@
         <!--Post Activity-->
         <scene sceneID="mW8-NX-Fiy">
             <objects>
-                <viewController id="jNj-Nl-S5E" customClass="PostController" customModule="iWeather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jNj-Nl-S5E" customClass="PostController" customModule="ActivityBuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vnU-6k-7hP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,6 +43,30 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWY-Nu-jUT">
+                                <rect key="frame" x="20" y="74" width="33" height="15"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdu-If-Ufg">
+                                <rect key="frame" x="20" y="138" width="49" height="15"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgI-FB-RLR">
+                                <rect key="frame" x="20" y="203" width="28" height="15"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Djm-dS-24V">
+                                <rect key="frame" x="20" y="267" width="46" height="15"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -50,7 +74,14 @@
                             <constraint firstItem="9CI-bS-jEX" firstAttribute="trailing" secondItem="TQ0-gP-xoy" secondAttribute="trailing" id="0fc-YE-tXE"/>
                             <constraint firstItem="9CI-bS-jEX" firstAttribute="leading" secondItem="vnU-6k-7hP" secondAttribute="leadingMargin" id="1fZ-0y-mLG"/>
                             <constraint firstItem="9CI-bS-jEX" firstAttribute="trailing" secondItem="vnU-6k-7hP" secondAttribute="trailingMargin" id="3Xf-ja-oG6"/>
+                            <constraint firstItem="MLh-l8-Qx0" firstAttribute="top" secondItem="Djm-dS-24V" secondAttribute="bottom" constant="6" id="5id-75-54e"/>
+                            <constraint firstItem="sdu-If-Ufg" firstAttribute="leading" secondItem="9CI-bS-jEX" secondAttribute="leading" id="9OT-oy-GsD"/>
+                            <constraint firstItem="nWY-Nu-jUT" firstAttribute="leading" secondItem="9CI-bS-jEX" secondAttribute="leading" id="CJz-YR-6G1"/>
+                            <constraint firstItem="B2F-IM-4jY" firstAttribute="top" secondItem="dgI-FB-RLR" secondAttribute="bottom" constant="7" id="D3f-cA-Ayt"/>
+                            <constraint firstItem="sdu-If-Ufg" firstAttribute="top" secondItem="9CI-bS-jEX" secondAttribute="bottom" constant="7" id="O9J-0T-Da6"/>
                             <constraint firstItem="TQ0-gP-xoy" firstAttribute="leading" secondItem="B2F-IM-4jY" secondAttribute="leading" id="SDn-hP-arQ"/>
+                            <constraint firstItem="nWY-Nu-jUT" firstAttribute="top" secondItem="ka7-eI-EGp" secondAttribute="top" constant="30" id="Tyw-st-q7D"/>
+                            <constraint firstItem="Djm-dS-24V" firstAttribute="leading" secondItem="MLh-l8-Qx0" secondAttribute="leading" id="Yj4-jO-Wsm"/>
                             <constraint firstItem="MLh-l8-Qx0" firstAttribute="top" secondItem="B2F-IM-4jY" secondAttribute="bottom" constant="29" id="bax-gr-8kb"/>
                             <constraint firstItem="9CI-bS-jEX" firstAttribute="top" secondItem="ka7-eI-EGp" secondAttribute="top" constant="53" id="hKh-RJ-gHV"/>
                             <constraint firstItem="TQ0-gP-xoy" firstAttribute="trailing" secondItem="B2F-IM-4jY" secondAttribute="trailing" id="itv-2z-V2Z"/>
@@ -58,6 +89,7 @@
                             <constraint firstItem="B2F-IM-4jY" firstAttribute="top" secondItem="TQ0-gP-xoy" secondAttribute="bottom" constant="30" id="mAB-4s-8Eb"/>
                             <constraint firstItem="B2F-IM-4jY" firstAttribute="trailing" secondItem="MLh-l8-Qx0" secondAttribute="trailing" id="q1t-xB-Uck"/>
                             <constraint firstItem="B2F-IM-4jY" firstAttribute="leading" secondItem="MLh-l8-Qx0" secondAttribute="leading" id="sjM-6a-WVQ"/>
+                            <constraint firstItem="dgI-FB-RLR" firstAttribute="leading" secondItem="B2F-IM-4jY" secondAttribute="leading" id="uGo-NV-gCO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ka7-eI-EGp"/>
                     </view>
