@@ -12,50 +12,44 @@ class FoodDiaryController: UIViewController, FoodCellProtocol {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var foods : [FoodModel]?
+    var foods : [FoodModel] = []
     var todayFoods: [FoodModel] = []
     var totalCalories : Int? = 0
     var targetCalories : Int? = 1500
     var totalBurnedCalories : Int? = 0
-    var activityData: [ActivityModel]?
+    var activityData: [ActivityModel] = []
+    
+    let now = Date()
+    let formatter = DateFormatter()
+
+    var nowString:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        formatter.dateFormat = "dd/MM/yyyy"
+        nowString = formatter.string(from: now)
+        
         foods = FoodManager().retrieve()
         loadFoodData()
         loadTableView()
         // Do any additional setup after loading the view.
     }
     
-    func generatePostID(length:Int) -> String{
-        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-        return String((0..<length).map{ _ in letters.randomElement()! })
-    }
-    
     func loadFoodData(){
-        let now = Date()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd/MM/yyyy"
-        let nowString = formatter.string(from: now)
-        
-        for food in foods! {
+        for food in foods {
             let dateFood = formatter.string(from: food.date!)
             if  dateFood  == nowString {
                 todayFoods.append(food)
                 totalCalories = totalCalories! + food.calories!
             }
         }
-        
     }
     
     func loadBurnedCalories() {
         totalBurnedCalories = 0
         self.activityData = ActivityStore().retrieve()
-        let now = Date()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd/MM/yyyy"
         let nowString = formatter.string(from: now)
-        for activity in activityData! {
+        for activity in activityData {
             let date = formatter.string(from: activity.date)
             if  date == nowString {
                 totalBurnedCalories = totalBurnedCalories! + activity.calories
@@ -69,9 +63,22 @@ class FoodDiaryController: UIViewController, FoodCellProtocol {
         tableView.reloadData()
     }
     
+    func generatePostID(length:Int) -> String{
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return String((0..<length).map{ _ in letters.randomElement()! })
+    }
+    
     func addFood() {
         let alert = UIAlertController(title: "Add Food",
         message: "Insert food data",
+        preferredStyle: .alert)
+        
+        let successAlert = UIAlertController(title: "Successfully Added",
+        message: "Data has been saved",
+        preferredStyle: .alert)
+        
+        let blankTextAlert = UIAlertController(title: "Blank Fields",
+        message: "Please fill all fields",
         preferredStyle: .alert)
         
         alert.addTextField { (textField: UITextField) in
@@ -89,21 +96,30 @@ class FoodDiaryController: UIViewController, FoodCellProtocol {
         
         let addAction = UIAlertAction(title: "Add", style: .default, handler: { (action) -> Void in
             // Get TextFields text
-            let nameTxt = alert.textFields![0].text
-            let calories = Int(alert.textFields![1].text!)
-            let id = self.generatePostID(length: 10)
-            FoodManager().create(id, nameTxt!, Date(), calories!)
-            
-            self.todayFoods.append(FoodModel(name: nameTxt, calories: calories, date: Date(), id:id))
-            self.totalCalories = self.totalCalories! + calories!
-            self.tableView.reloadData()
-            
+            if alert.textFields![0].text == "" || alert.textFields![1].text! == "" {
+                self.present(blankTextAlert, animated: true, completion: nil)
+            }
+            else {
+                let nameTxt = alert.textFields![0].text
+                let calories = Int(alert.textFields![1].text!)
+                let id = self.generatePostID(length: 10)
+                FoodManager().create(id, nameTxt!, Date(), calories!)
+                
+                self.todayFoods.append(FoodModel(name: nameTxt, calories: calories, date: Date(), id:id))
+                self.totalCalories = self.totalCalories! + calories!
+                self.tableView.reloadData()
+
+                self.present(successAlert, animated: true, completion: nil)
+            }
         })
         
         let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: { (action) -> Void in })
+        let ok = UIAlertAction(title: "Ok", style: .default, handler: { (action) -> Void in })
         
         alert.addAction(addAction)
         alert.addAction(cancel)
+        successAlert.addAction(ok)
+        blankTextAlert.addAction(ok)
         present(alert, animated: true, completion: nil)
     }
     
@@ -114,15 +130,15 @@ class FoodDiaryController: UIViewController, FoodCellProtocol {
         tableView.register(UINib(nibName: "FoodListViewCell", bundle: nil), forCellReuseIdentifier: "foodCell")
         tableView.register(UINib(nibName: "AddFoodCell", bundle: nil), forCellReuseIdentifier: "btnCell")
         tableView.reloadData()
-           
         tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 1))
        }
     
     @objc func reloadTable() {
-          DispatchQueue.main.async { //please do all interface updates in main thread only
-          self.tableView.reloadData()
-          self.viewWillAppear(true)
-    } }
+        DispatchQueue.main.async { //please do all interface updates in main thread only
+            self.tableView.reloadData()
+            self.viewWillAppear(true)
+        }
+    }
  
     /*
     // MARK: - Navigation
@@ -152,7 +168,6 @@ extension FoodDiaryController : UITableViewDelegate, UITableViewDataSource {
         if indexPath.section != 0 {
             return 60
         }
-        
         return 90
     }
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -218,24 +233,4 @@ extension FoodDiaryController : UITableViewDelegate, UITableViewDataSource {
         
     }
     
-}
-
-extension Date {
-    static var yesterday: Date { return Date().dayBefore }
-    static var tomorrow:  Date { return Date().dayAfter }
-    var dayBefore: Date {
-        return Calendar.current.date(byAdding: .day, value: -1, to: noon)!
-    }
-    var dayAfter: Date {
-        return Calendar.current.date(byAdding: .day, value: 1, to: noon)!
-    }
-    var noon: Date {
-        return Calendar.current.date(bySettingHour: 12, minute: 0, second: 0, of: self)!
-    }
-    var month: Int {
-        return Calendar.current.component(.month,  from: self)
-    }
-    var isLastDayOfMonth: Bool {
-        return dayAfter.month != month
-    }
 }

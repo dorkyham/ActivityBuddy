@@ -50,6 +50,7 @@
 		B0BC1D1524A09D3700DA1B8F /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC1D1424A09D3700DA1B8F /* FoodModel.swift */; };
 		B0BC1D1824A0A68900DA1B8F /* AddFoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC1D1624A0A68900DA1B8F /* AddFoodCell.swift */; };
 		B0BC1D1924A0A68900DA1B8F /* AddFoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0BC1D1724A0A68900DA1B8F /* AddFoodCell.xib */; };
+		B0BC1D1B24A1D73C00DA1B8F /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BC1D1A24A1D73C00DA1B8F /* DateExtension.swift */; };
 		B0BFD04D24A05B490033B2F4 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BFD04C24A05B490033B2F4 /* HealthKitManager.swift */; };
 		B0BFD05624A0654C0033B2F4 /* StepDataListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BFD05524A0654C0033B2F4 /* StepDataListController.swift */; };
 		B0BFD05824A065780033B2F4 /* StepDataList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0BFD05724A065780033B2F4 /* StepDataList.storyboard */; };
@@ -123,6 +124,7 @@
 		B0BC1D1424A09D3700DA1B8F /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
 		B0BC1D1624A0A68900DA1B8F /* AddFoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodCell.swift; sourceTree = "<group>"; };
 		B0BC1D1724A0A68900DA1B8F /* AddFoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddFoodCell.xib; sourceTree = "<group>"; };
+		B0BC1D1A24A1D73C00DA1B8F /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		B0BFD04C24A05B490033B2F4 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		B0BFD05524A0654C0033B2F4 /* StepDataListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepDataListController.swift; sourceTree = "<group>"; };
 		B0BFD05724A065780033B2F4 /* StepDataList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StepDataList.storyboard; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 			children = (
 				B0581F8E249CCF9400170A8A /* DataStore.swift */,
 				B0BFD04C24A05B490033B2F4 /* HealthKitManager.swift */,
+				B0BC1D1A24A1D73C00DA1B8F /* DateExtension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -673,6 +676,7 @@
 				B0581F97249CDAED00170A8A /* WeatherController.swift in Sources */,
 				B0581F87249CCD6C00170A8A /* HomeController.swift in Sources */,
 				B0BC1D1024A09B6100DA1B8F /* FoodListViewCell.swift in Sources */,
+				B0BC1D1B24A1D73C00DA1B8F /* DateExtension.swift in Sources */,
 				B0581FD0249DEA4200170A8A /* ActivityDetailCell.swift in Sources */,
 				B0581F9C249CDD4800170A8A /* WeatherDetailViewCell.swift in Sources */,
 				B0581FB7249DC84500170A8A /* ActivityController.swift in Sources */,

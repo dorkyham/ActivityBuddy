@@ -17,6 +17,7 @@ class StepDataListController: UIViewController {
     
     @IBOutlet weak var totalSteps: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hkManager.getAllStepsDataStatisticInMonth { (stats) in
@@ -89,7 +90,5 @@ extension StepDataListController : UITableViewDelegate, UITableViewDataSource {
         cell?.dateLabel.text = startDate
         return cell!
     }
-    
-    
     
 }
