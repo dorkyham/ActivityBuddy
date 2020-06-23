@@ -13,11 +13,12 @@ struct FoodModel {
     var name:String?
     var calories:Int?
     var date:Date?
+    var id:String?
 }
 
 struct FoodManager {
     // fungsi tambah data
-    func create(_ title:String, _ date:Date, _ calories: Int){
+    func create(_ id:String, _ title:String, _ date:Date, _ calories: Int){
         
         // referensi ke AppDelegate
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
@@ -30,6 +31,7 @@ struct FoodManager {
         
         // entity body
         let insert = NSManagedObject(entity: entity!, insertInto: managedContext)
+        insert.setValue(id, forKey: "id")
         insert.setValue(title, forKey: "name")
         insert.setValue(date, forKey: "date")
         insert.setValue(calories, forKey: "calories")
@@ -42,7 +44,7 @@ struct FoodManager {
         }
         
     }
-
+    
     // fungsi refrieve semua data
     func retrieve() -> [FoodModel]{
         
@@ -62,7 +64,7 @@ struct FoodManager {
             
             result.forEach{ food in
                 foods.append(
-                    FoodModel(name: (food.value(forKey: "name") as! String), calories: (food.value(forKey: "calories") as! Int), date: (food.value(forKey: "date") as! Date))
+                    FoodModel(name: (food.value(forKey: "name") as! String), calories: (food.value(forKey: "calories") as! Int), date: (food.value(forKey: "date") as! Date), id: (food.value(forKey: "id") as! String))
                 )
             }
         }catch let err{
@@ -73,7 +75,7 @@ struct FoodManager {
         
     }
 
-    func delete(_ row: Int){
+    func delete(_ id:String){
 
         // referensi ke AppDelegate
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
@@ -83,10 +85,11 @@ struct FoodManager {
 
         // fetch data to delete
         let fetchRequest:NSFetchRequest<NSFetchRequestResult> = NSFetchRequest.init(entityName: "Food")
-        //fetchRequest.predicate = NSPredicate(format: "email = %@", email)
-
+        fetchRequest.predicate = NSPredicate(format: "id = %@", id)
+        
         do{
-            let dataToDelete = try managedContext.fetch(fetchRequest)[row] as! NSManagedObject
+            let fetch = try managedContext.fetch(fetchRequest)
+            let dataToDelete = fetch[0] as! NSManagedObject
             managedContext.delete(dataToDelete)
 
             try managedContext.save()

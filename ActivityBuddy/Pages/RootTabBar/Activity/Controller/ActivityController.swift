@@ -38,14 +38,27 @@ class ActivityController: UIViewController {
         
     }
     
+    func loadTodayCalories(){
+        let now = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        let nowString = formatter.string(from: now)
+    
+    
+        for oneData in data! {
+            let dateActivity = formatter.string(from: oneData.date)
+            if  dateActivity  == nowString {
+                calories! += oneData.calories
+            }
+        }
+    }
+        
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         calories = 0
         
         self.data = ActivityStore().retrieve()
-        for oneData in data!{
-            calories! += oneData.calories
-        }
+        loadTodayCalories()
         activityTableView.reloadData()
         caloriesLabel.text = "\(calories ?? 0)"
     }

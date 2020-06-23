@@ -15,11 +15,12 @@
     <entity name="Food" representedClassName="Food" syncable="YES" codeGenerationType="class">
         <attribute name="calories" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="Activity" positionX="-54" positionY="18" width="128" height="118"/>
-        <element name="Food" positionX="-36" positionY="54" width="128" height="88"/>
         <element name="City" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Food" positionX="-36" positionY="54" width="128" height="103"/>
     </elements>
 </model>
